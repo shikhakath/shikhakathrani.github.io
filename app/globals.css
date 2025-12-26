@@ -22,5 +22,61 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .heading-cursive {
+    font-family: var(--font-pacifico);
+  }
+
+  .serif-body {
+    font-family: var(--font-eb-garamond);
+  }
+
+  .code {
+    font-family: var(--font-inconsolata);
+  }
+
+  /* for: Shikha */
+  .font-homemade {
+    font-family: var(--font-homemade-apple);
+  }
+
+  /* for: hi, i'm ___ */
+  .font-ptserif {
+    font-family: var(--font-pt-serif);
+  }
+  @keyframes fade {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  }
+
+  .animate-fade {
+    animation: fade 0.5s linear forwards;
+  }
+
+  @keyframes bubbleIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+    }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    }
+  }
+
+  .bubble-pop {
+    opacity: 0; /* start hidden until animation runs */
+    animation: bubbleIn 0.45s ease-out forwards;
+    animation-delay: 0.35s; /* pops in a bit after the page loads */
+  }
+
+
 }
