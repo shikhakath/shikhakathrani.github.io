@@ -1,3 +1,4 @@
+import "./globals.css"
 import type { Metadata } from "next";
 import { NavTabs } from "./components/NavTabs";
 import Link from "next/link";
