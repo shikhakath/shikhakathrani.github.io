@@ -92,6 +92,28 @@ export const projects: Project[] = [
     ],
     },
 
+    {
+    slug: "carevoice-hackathon",
+    title: "🩺 CareVoice - UC Berkeley AI Hackathon Project",
+    timeline: "Summer 2024",
+    summary: [
+      "Prototyped and coded an app to help non-English-speaking patients communicate symptoms. I developed the iOS frontend and integrated various multimodal API's such as Groq, Llama, ElevenLabsAPI, and DeepL to simplify interactions between non-english speaking patients and their healthcare providers.", 
+      "The system recognizes speech, emotion, and context to better interpret how patients describe symptoms.",
+    ],
+    tags: ["Swift", "iOS", "FastAPI", "Groq", "ElevenLabs API", "Figma", "DeepL", "Llama"],
+
+    links: [
+        {
+        label: "Github Repo",
+        href: "https://github.com/shikhakath/ucbhackathon24",
+        },
+        {
+        label: "Devpost",
+        href: "https://devpost.com/software/care-voice",
+        },
+    ],
+  },
+
       {
     slug: "bioe-121-proj",
     title: " 💊 Microfluidic Minimum Inhibitory Concentration Test for Point of Care Assessment of Typhoid Fever",
@@ -102,7 +124,7 @@ export const projects: Project[] = [
       "",
     summary: ["Developed a fabrication protocol and device design for a microfluidic point-of-care device that finds the minimum inhibitory concentration (MIC) of antibiotics against Salmonella Typhi directly from a drop of blood. In calculating the exponential growth rate of bacteria and choosing dimensions for our ladder channels, our device achieves a readout time within 9 hours."
     ],
-    tags: ["C", "GDB/CGDB", "Git", "Linux"],
+    tags: ["Microfabrication", "Microfluidics", "Medical Device Design", "Antibiotic Susceptibility Testing", "Soft Lithography"],
     documents: [
       {
         label: "BioE 121 Final Project Report",
@@ -175,28 +197,6 @@ export const projects: Project[] = [
       "Built computational models to study how Drosophila sensory neurons generate spikes and drive movement in biomechanical simulations. I implemented parts of the Hodgkin–Huxley model and wrote data-processing pipelines for large neural simulations, focusing on stability and performance."
     ],
     tags: ["Python", "TensorFlow", "Brian2", "NeuroMechFly", "FlyVis"],
-  },
-
-    {
-    slug: "carevoice-hackathon",
-    title: "🩺 CareVoice - UC Berkeley AI Hackathon Project",
-    timeline: "Summer 2024",
-    summary: [
-      "Prototyped and coded an app to help non-English-speaking patients communicate symptoms. I developed the iOS frontend and integrated various multimodal API's such as Groq, Llama, ElevenLabsAPI, and DeepL to simplify interactions between non-english speaking patients and their healthcare providers.", 
-      "The system recognizes speech, emotion, and context to better interpret how patients describe symptoms.",
-    ],
-    tags: ["Swift", "iOS", "FastAPI", "Groq", "ElevenLabs API", "Figma", "DeepL", "Llama"],
-
-    links: [
-        {
-        label: "Github Repo",
-        href: "https://github.com/shikhakath/ucbhackathon24",
-        },
-        {
-        label: "Devpost",
-        href: "https://devpost.com/software/care-voice",
-        },
-    ],
   },
   
 ];

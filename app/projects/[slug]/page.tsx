@@ -1,9 +1,10 @@
+// app/projects/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { projects, getProject } from "../projectsData";
 
-//params needs to be a promise for this next.js version
+// params needs to be a promise for this next.js version
 type Props = { params: Promise<{ slug: string }> };
 
 // pre-generate static routes
@@ -31,13 +32,13 @@ export default async function ProjectDetailPage({ params }: Props) {
         </Link>
 
         <section
-        className="
-          rounded-3xl border border-white/10
-          bg-gradient-to-br
-          from-sky-200/20
-          via-sky-200/40
-          p-8 shadow-2xl space-y-6
-        "
+          className="
+            rounded-3xl border border-white/10
+            bg-gradient-to-br
+            from-sky-200/20
+            via-sky-200/40
+            p-8 shadow-2xl space-y-6
+          "
         >
           <header className="space-y-2">
             <p className="text-sm font-semibold text-purple-200">
@@ -77,6 +78,21 @@ export default async function ProjectDetailPage({ params }: Props) {
               {project.details.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
+            </section>
+          )}
+
+          {/* pdf embed */}
+          {project.documents && project.documents.length > 0 && (
+            <section className="space-y-3">
+              <h2 className="text-sm font-semibold text-purple-100">
+                Project Report
+              </h2>
+
+              <iframe
+                src={project.documents[0].href}
+                className="w-full"
+                style={{ height: "90vh", border: "none" }}
+              />
             </section>
           )}
 
